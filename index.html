@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toolbar col-md-12">
+        <div class="toolbar__center">Weather Dashboard</div>
+    </div>
+
+    <!-- <div id = "openweathermap-widget-11" ></div> -->
+
+    <div id="searchContainer">
+        <input class="searchControl" type="text" placeholder="City Name..." id="searchInput">
+        <button class="searchControl" id="searchBtn">Search</button>
+    </div>
+    
+    <div id="weatherContainer">
+        <div id="weatherDescription">
+            <h1 id="cityHeader"></h1>
+            <div id="weatherMain">
+                <div id="temperature"></div>
+                <div id="weatherDescriptionHeader"></div>
+            </div>
+            <hr>
+            <div id="humidity" class="bottomDetails"></div>
+            <div id="windSpeed" class="bottomDetails"></div>
+        </div>
+    </div>
+
+
+    <!-- <script src='https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 11,cityid: '5780993',appid: '3cabd239edc7a1a02e8bbcaf7de0b2ef',units: 'imperial',containerid: 'openweathermap-widget-11',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="java.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+    <div class="toolbar col-md-12">
+        <div class="toolbar__center">Weather Dashboard</div>
+    </div>
+        <section class="citySearch col-md-4">
+            <input id="cityTxt" placeholder="Search a City..." class="clearance"></input>
+            <button class="button" id="weatherBtn">Search</button>
+        </section>
+
+        <section class="section" id="result"></section>
+
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="java.js"></script>
+</body>
+</html> -->
