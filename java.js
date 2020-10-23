@@ -1,5 +1,6 @@
 // establish my variables 
-// $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
+$("#currentDay").text(moment().format("dddd, MMMM Do, YYYY"));
+
 var button = document.querySelector('.searchCity');
 var inputValue = document.querySelector('.inputValue'); 
 var cityName = document.querySelector('.cityName');
@@ -13,7 +14,7 @@ var searchMethod = "q";
 // create a searchCity section 
 // button, input field, local storage list inside of a column container
 button.addEventListener('click', function(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid='+apiKey) 
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&units=imperial&appid='+apiKey) 
     .then(response => response.json())
     .then(data => {
         var cityNameValue = data['name'];
@@ -21,11 +22,16 @@ button.addEventListener('click', function(){
         var humidityValue = data['main']['humidity'];
         var windSpeedValue = data ['wind']['speed'];
 
-        cityName.innerHTML = cityNameValue;
-        temp.innerHTML = tempValue;
-        humidity.innerHTML = humidityValue;
-        windSpeed.innerHTML = windSpeedValue;
-    })
-});    
+        cityName.innerHTML = `City: ${cityNameValue}`;
+        temp.innerHTML = `Temperature: ${tempValue}`;
+        humidity.innerHTML = `Humidity: ${humidityValue}`;
+        windSpeed.innerHTML = `Wind Speed: ${windSpeedValue}`;
+    });
+});
 
+$("#searchBtn").on("click", function(){
+    var value = $(this).siblings(".description").val()
+    var key = $(this).parent().attr("id")
+    localStorage.setItem(key, value)
+});
 
