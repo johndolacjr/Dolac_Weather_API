@@ -10,7 +10,7 @@ body {
 
 #searchContainer {
     text-align: left;
-    border: thin;
+    border-style: solid;
     border-color: black;
     border-radius: 3px;
 }
@@ -37,5 +37,5 @@ body {
     border: thin;
     border-color: black;
     border-radius: 3px;
-    text-align: center;
+    text-align: left;
 }
