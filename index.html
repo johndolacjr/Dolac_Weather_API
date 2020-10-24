@@ -15,25 +15,104 @@
 
 <!-- create a searchCity section 
 button, input field, local storage list inside of a column container -->
-    <div id="searchContainer col-md-4">
-        <h1>Search for a City:</h1>
-       <br>
-        <input class="inputValue" type="text" placeholder="City Name...">
-        <button class="searchCity" id="searchBtn">Search</button>
+    <div id="searchContainer" class="row">
+        <div class="col-md-4">
+            <h1>Search for a City:</h1>
+            <br>
+            <input class="inputValue" type="text" placeholder="City Name...">
+            <button class="searchCity" id="searchBtn">Search</button>
+        </div>
+    
+        <!-- create a weather dashboard area for the current chosen city. -->
+        <div class="col-md-8">
+            <div class="weatherContainer row" id="display">
+                <div class="row">
+                    <h1 class="cityName"></h1>
+                    <img class="today-icon"></img>
+                <div class="col-md-8">
+                <div class="row"> 
+                    <div class="col-md-8">
+                        <p class="temp"></p>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="humidity"></p>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="windSpeed"></p>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="uv"></p>
+                    </div>
+                    
+                </div>
+                </div>
+                </div>
+            </div>
+        
+        
+        <div class="cardsContainer row">
+            <div class="day-one card-group">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="date"></h5>
+                    <p class="temp"></p>
+                    <p class="humidity"></p>
+                    <img class="tomorrow-icon"></img>
+                  </div>
+                </div>
+            </div>
+            <div class="cardsContainer row">
+                <div class="day-two card-group">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="date"></h5>
+                        <p class="temp"></p>
+                        <p class="humidity"></p>
+                        <img class="tomorrow-icon"></img>
+                      </div>
+                    </div>
+                </div>
+                <!-- <div class="dayTwo card-group">
+                    <div class="card">
+                      <img src="..." class="card-img-top" alt="icon">
+                      <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <p class="card-text"><small class="text-muted"></small></p>
+                      </div>
+                    </div>
+                </div>
+                <div class="dayThree card-group">
+                        <div class="card">
+                          <img src="..." class="card-img-top" alt="icon">
+                          <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text"></p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                          </div>
+                        </div>
+                </div>
+                <div class="dayFour card-group">
+                    <div class="card">
+                      <img src="..." class="card-img-top" alt="icon">
+                      <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <p class="card-text"><small class="text-muted"></small></p>
+                      </div>
+                    </div>
+                </div>
+                <div class="dayFive card-group">
+                    <div class="card">
+                      <img src="..." class="card-img-top" alt="icon">
+                      <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <p class="card-text"><small class="text-muted"></small></p>
+                      </div>
+                    </div>
+                </div> -->
     </div>
-
-<!-- create a weather dashboard area for the current chosen city. -->
-    <div class="weatherContainer col-md-8" id="display">
-            <h1 class="cityName"></h1>
-            <p class="temp"></p>
-            <p class="humidity"></p>
-            <p class="windSpeed"></p>
-            <p class="uv"></p>
-    </div>
-
-
-
-    <div>
 <!-- Create a five day forcast 
 want to reference my widget!!-->
 
