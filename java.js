@@ -1,6 +1,4 @@
 // establish my variables 
-$("#currentDay").text(moment().format("dddd, MMMM Do, YYYY"));
-
 var button = document.querySelector('.searchCity');
 var inputValue = document.querySelector('.inputValue'); 
 var cityName = document.querySelector('.cityName');
@@ -13,6 +11,8 @@ var uv = document.querySelector('.uv');
 var apiKey = "3cabd239edc7a1a02e8bbcaf7de0b2ef";
 var units = "imperial"; 
 var searchMethod = "q";
+var citiesArray = []
+var cityStorage = document.querySelector('.cities-list');
 
 // create a searchCity section 
 button.addEventListener('click', function(){
@@ -35,6 +35,7 @@ button.addEventListener('click', function(){
         humidity.innerHTML = `Humidity: ${humidityValue}%`;
         windSpeed.innerHTML = `Wind Speed: ${windSpeedValue} MPH`;
         
+
         getUvIndex(data.coord.lat, data.coord.lon);
         getForecast(inputValue.value);
 
@@ -64,20 +65,34 @@ function getForecast(city){
     .then(response => response.json())
     .then(data => {
         console.log(data);
-     for (i = 0; i < data.list.length; i += 8);
+     for (i = 0; i < data.list.length; i += 8) {
+        
+     };
         // create 5 cards to populate the 5 day forcast (temp and humidity, icon and date)no UV index for 5 days)
     
     });
 };
 
-// goes into original forecast and 5 days 
-//Create image tag - 
-
 
 //Create local storage list inside of a column container 
 
-// $("#searchBtn").on("click", function(){
-//     var value = $(this).siblings(".description").val()
-//     var key = $(this).parent().attr("id")
-//     localStorage.setItem(key, value)
+function localStorage(){
+    $("#searchBtn").on("click", function(){
+        var textareaElement = $(".inputValue").val();
+        var key = JSON.parse(localStorage.getItem("citiesArray"))
+        citiesArray.push(textareaElement);
+        localStorage.setItem(key, JSON.stringify(citiesArray));
+    });
+}
+
+
+
+//     citiesArray.push(value)
+//     console.log(citiesArray)
+//     localStorage.setItem(key, JSON.stringify(citiesArray))
+//     document.getElementById('citiesArrayList').value = localStorage.getItem(citiesArray)
 // });
+
+
+
+// var citiesList = localStorage.getItem("Cities")
