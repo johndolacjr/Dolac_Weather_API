@@ -66,13 +66,11 @@ function getForecast(city){
     .then(data => {
         console.log(data);
      for (i = 0; i < data.list.length; i += 8) {
-        
+        return 
      };
-        // create 5 cards to populate the 5 day forcast (temp and humidity, icon and date)no UV index for 5 days)
-    
+// create 5 cards to populate the 5 day forcast (temp and humidity, icon and date)no UV index for 5 days)
     });
 };
-
 
 //Create local storage list inside of a column container 
 
@@ -84,15 +82,3 @@ function localStorage(){
         localStorage.setItem(key, JSON.stringify(citiesArray));
     });
 }
-
-
-
-//     citiesArray.push(value)
-//     console.log(citiesArray)
-//     localStorage.setItem(key, JSON.stringify(citiesArray))
-//     document.getElementById('citiesArrayList').value = localStorage.getItem(citiesArray)
-// });
-
-
-
-// var citiesList = localStorage.getItem("Cities")
