@@ -107,7 +107,7 @@ function getWeather(city){
                     $("#5dayForecast").empty();
                 }
                 
-                const card = $("<div>").addClass("card col-md-2 ml-4 bg-primary text-white");
+                const card = $("<div>").addClass("card col-md-2 ml-4 bg-info text-white");
                 const cardBody = $("<div>").addClass("card-body p-3")
                 const cityDate = $("<h4>").addClass("card-title").text(futureDate.toLocaleDateString('en-US'));
                 const highTemp = $("<p>").addClass("card-text").text("High: " + futurehightemp + " °F");
