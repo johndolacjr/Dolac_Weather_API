@@ -14,6 +14,6 @@ Once the search button is clicked; you will see todays weather and the following
 - https link: https://johndolacjr.github.io/Dolac_Weather_API/
 - git hub link: https://github.com/johndolacjr/Dolac_Weather_API.git
 
-##Contact Info: 
+## Contact Info: 
 * Name: John Dolac
 * Email: johndolacjr@gmail.com
